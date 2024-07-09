@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>115616_ping_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="115616_ping_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="115616_ping_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="115616_ping_icon.png" />
+  </ItemGroup>
+
+</Project>

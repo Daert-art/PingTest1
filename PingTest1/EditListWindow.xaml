@@ -1,0 +1,33 @@
+﻿<Window x:Class="PingTest.EditListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Edit IP Address List" Height="450" Width="400" MinHeight="300" MinWidth="400"
+        FocusManager.FocusedElement="{Binding ElementName=txtNewIPAddress}">       
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Введення IP адреси та кнопка додавання -->
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBox x:Name="txtNewIPAddress" Style="{StaticResource placeHolder}" Tag="Введіть IP адресу" Width="200" Margin="0 0 10 0" Foreground="AntiqueWhite" KeyDown="txtNewIPAddress_KeyDown"/>
+            <TextBox x:Name="txtDeviceName" Style="{StaticResource placeHolder}" Tag="Введіть назву" Width="200" Margin="0 0 10 0" Foreground="AntiqueWhite" KeyDown="txtNewIPAddress_KeyDown"/>
+            <Button x:Name="AddIPAddressButton" Content="Додати IP адресу" Width="150" Click="AddIPAddressButton_Click"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <ListBox x:Name="lbIpAddresses" Margin="10" SelectionMode="Single"/>
+        </ScrollViewer>
+
+        <!-- Кнопки редагування та видалення -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button x:Name="EditIPAddressButton" Content="Корегувати" Width="75" Click="EditIPAddressButton_Click"/>
+            <Button x:Name="DeleteIPAddressButton" Content="Видалити" Width="75" Margin="10 0 0 0" Click="DeleteIPAddressButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
