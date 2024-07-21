@@ -14,8 +14,7 @@ namespace PingTest
             {
                 IPAddress parsedIpAddress;
                 if (IPAddress.TryParse(ipAddress, out parsedIpAddress))
-                {
-                    // Тут можна додати додаткові перевірки на належність до певної мережі або маски
+                {                    
                     return true;
                 }
             }

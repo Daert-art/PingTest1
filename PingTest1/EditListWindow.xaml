@@ -13,21 +13,19 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
-        <!-- Введення IP адреси та кнопка додавання -->
+       
         <StackPanel Grid.Row="0" Margin="10">
-            <TextBox x:Name="txtNewIPAddress" Style="{StaticResource placeHolder}" Tag="Введіть IP адресу" Width="200" Margin="0 0 10 0" Foreground="AntiqueWhite" KeyDown="txtNewIPAddress_KeyDown"/>
-            <TextBox x:Name="txtDeviceName" Style="{StaticResource placeHolder}" Tag="Введіть назву" Width="200" Margin="0 0 10 0" Foreground="AntiqueWhite" KeyDown="txtNewIPAddress_KeyDown"/>
-            <Button x:Name="AddIPAddressButton" Content="Додати IP адресу" Width="150" Click="AddIPAddressButton_Click"/>
+            <TextBox x:Name="txtNewIPAddress" Style="{StaticResource placeHolder}" Tag="Enter the IP address" Width="200" Margin="0 0 10 0" Foreground="AntiqueWhite" KeyDown="txtNewIPAddress_KeyDown"/>
+            <TextBox x:Name="txtDeviceName" Style="{StaticResource placeHolder}" Tag="Enter a name" Width="200" Margin="0 0 10 0" Foreground="AntiqueWhite" KeyDown="txtNewIPAddress_KeyDown"/>
+            <Button x:Name="AddIPAddressButton" Content="Add IP address" Width="150" Click="AddIPAddressButton_Click"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             <ListBox x:Name="lbIpAddresses" Margin="10" SelectionMode="Single"/>
         </ScrollViewer>
-
-        <!-- Кнопки редагування та видалення -->
+       
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-            <Button x:Name="EditIPAddressButton" Content="Корегувати" Width="75" Click="EditIPAddressButton_Click"/>
-            <Button x:Name="DeleteIPAddressButton" Content="Видалити" Width="75" Margin="10 0 0 0" Click="DeleteIPAddressButton_Click"/>
+            <Button x:Name="EditIPAddressButton" Content="Change" Width="75" Click="EditIPAddressButton_Click"/>
+            <Button x:Name="DeleteIPAddressButton" Content="Remove" Width="75" Margin="10 0 0 0" Click="DeleteIPAddressButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

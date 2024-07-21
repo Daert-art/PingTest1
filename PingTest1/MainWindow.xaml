@@ -14,18 +14,16 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!-- Кнопка редагування списку та налаштування періодичності -->
+        
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
-            <Button x:Name="EditListButton" Content="Корегувати список" Width="120" Click="EditListButton_Click"/>
+            <Button x:Name="EditListButton" Content="Edit the list" Width="120" Click="EditListButton_Click"/>
             <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
                 <TextBlock Text="Ping Interval (seconds):" VerticalAlignment="Center"/>
                 <TextBox x:Name="txtPingInterval" Width="50" Margin="10 0 0 0" Text="10"/>
                 <Button x:Name="SetIntervalButton" Content="Set" Width="50" Margin="10 0 0 0" Click="SetIntervalButton_Click"/>
             </StackPanel>
         </StackPanel>
-
-        <!-- ScrollViewer з ListBox для результатів пінгу -->
+        
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             <ListBox x:Name="lbPingResults" Margin="10" SelectionMode="Single" Background="Beige">
                 <ListBox.ItemTemplate>
@@ -36,13 +34,10 @@
                                 <ColumnDefinition Width="Auto"/>                                
                             </Grid.ColumnDefinitions>
 
-                            <StackPanel Grid.Column="0">
-                                <!-- Відображення імені пристрою -->
+                            <StackPanel Grid.Column="0">                                
                                 <TextBlock Text="{Binding DeviceName}" FontWeight="Bold"/>
-                                <!-- Відображення IP адреси -->
                                 <TextBlock Text="{Binding IpAddress}"/>
                             </StackPanel>
-                            <!-- Відображення статусу у вигляді кружечка -->
                             <Ellipse Width="10" Height="10" Fill="{Binding IsReachable, Converter={StaticResource BoolToBrushConverter}}" Grid.Column="1" Margin="0 0 5 0"/>
                         </Grid>
                     </DataTemplate>

@@ -18,7 +18,7 @@ namespace PingTest
             DisplayIpAddresses();
 
             pingTimer = new DispatcherTimer();
-            pingTimer.Interval = TimeSpan.FromSeconds(10); // За замовчуванням інтервал 10 секунд
+            pingTimer.Interval = TimeSpan.FromSeconds(10); 
             pingTimer.Tick += PingTimer_Tick;
             pingTimer.Start();
         }
@@ -28,7 +28,6 @@ namespace PingTest
             ipAddresses.Clear();
             try
             {
-                // Зчитуємо IP адреси та імена пристроїв з файлу
                 string[] lines = File.ReadAllLines("ipAddresses.txt");
                 foreach (string line in lines)
                 {
@@ -51,7 +50,6 @@ namespace PingTest
         {
             try
             {
-                // Зберігаємо IP адреси та імена пристроїв у файл
                 List<string> lines = new List<string>();
                 foreach (var ipAddress in ipAddresses)
                 {
