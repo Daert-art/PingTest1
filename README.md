@@ -18,7 +18,7 @@ PingTest is a simple WPF application that allows you to monitor the availability
 
 1. Clone the repository:
     ```sh
-    git clone [https://github.com/yourusername/PingTest.git](https://github.com/Daert-art/PingTest1)
+    https://github.com/Daert-art/PingTest1
     ```
 
 2. Open the project in Visual Studio.
@@ -36,7 +36,7 @@ PingTest is a simple WPF application that allows you to monitor the availability
 
 ## Example
 
-[![PingTest Screenshot](path_to_your_screenshot.png)](https://github.com/Daert-art/PingTest1/blob/master/Screenshot_2.png)
+![PingTest Screenshot](https://github.com/Daert-art/PingTest1/blob/master/Screenshot_2.png)
 
 
 ## Contributing
@@ -45,6 +45,6 @@ We welcome contributions! Please create a pull request or open an issue on GitHu
 
 ## Contact Information
 
-- Author: [Daert-art]
+- Author: Daert-art
 - Email: [daertmmm@gmail.com]
-- GitHub: [[https://github.com/yourusername](https://github.com/yourusername)](https://github.com/Daert-art)
+- GitHub: https://github.com/Daert-art
